@@ -40,7 +40,8 @@ $handle = sub {
 		"\n".&descape("┃ "),
 		#(' ' x length $menuselect),
 		$text,
-		"\n".&descape("┗━━")."\n",
+		#"\n".&descape("┗━━")."\n",
+		"\n",
 	));
 	return 1;
 };
@@ -81,7 +82,8 @@ $pmhandle = sub {
 		"\n".&descape("┃ "),
 		#(' ' x length $menuselect),
 		$text,
-		"\n".&descape("┗━━")."\n",
+		#"\n".&descape("┗━━")."\n",
+		"\n",
 	));
 	return 1;
 };
