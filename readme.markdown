@@ -3,6 +3,8 @@ PrettyADN
 
 A texapp extension which reformats the posts to look pretty.
 
+![Screen shot](screenshot.png)
+
 PrettyADN.pl
 ---------------
 
