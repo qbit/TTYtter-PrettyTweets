@@ -32,7 +32,7 @@ $handle = sub {
 	my $bar = &descape("┃ ");
 	$text =~ s/\\n/\n$bar/g;
 
-	print $streamout (
+	&sto(join('', 
 		&descape("┏━━ "),
 		$names,
 		"${color}".$menuselect."$OFF",
@@ -41,7 +41,7 @@ $handle = sub {
 		#(' ' x length $menuselect),
 		$text,
 		"\n".&descape("┗━━")."\n",
-	);
+	));
 	return 1;
 };
 
@@ -73,7 +73,7 @@ $pmhandle = sub {
 	my $bar = &descape("┃ ");
 	$text =~ s/\\n/\n$bar/g;
 
-	print $streamout (
+	&sto(join('',
 		&descape("┏━━ "),
 		$names,
 		"${color}".$menuselect."$OFF",
@@ -82,6 +82,6 @@ $pmhandle = sub {
 		#(' ' x length $menuselect),
 		$text,
 		"\n".&descape("┗━━")."\n",
-	);
+	));
 	return 1;
 };
