@@ -8,7 +8,7 @@ A texapp extension which reformats the posts to look pretty.
 PrettyADN.pl
 ---------------
 
-The extension.  Simply load it adding -exts="/path/to/PrettyADN.pl" to your
+The extension.  Simply load it by adding -exts="/path/to/PrettyADN.pl" to your
 ttytter invocation.
 
 *Please note*: your terminal needs to support unicode and be at least 145
@@ -26,7 +26,7 @@ NOTE
 I have not tested this code with anything but my own setup.  If you *do* run it
 and encounter problems, I'd love to hear about it.
 
-^ Applies to me to :D
+^ Applies to me too :D
 
 TODO
 ----
