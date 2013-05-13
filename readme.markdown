@@ -1,9 +1,9 @@
-PrettyTweets
+PrettyADN
 ============
 
-A TTYtter extension which reformats the tweets to look pretty.
+A texapp extension which reformats the posts to look pretty.
 
-PrettyTweets.pl
+PrettyADN.pl
 ---------------
 
 The extension.  Simply load it adding -exts="/path/to/PrettyTweets.pl" to your
@@ -16,10 +16,12 @@ Known Bugs
 ----------
 
 This extension inexplicably breaks growl support (possibly other notifications
-as well)
+as well) - this may not still apply ( 2013-05-12 )
 
 NOTE
 ----
 
 I have not tested this code with anything but my own setup.  If you *do* run it
 and encounter problems, I'd love to hear about it.
+
+^ Applies to me to :D
