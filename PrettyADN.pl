@@ -58,11 +58,11 @@ $pmhandle = sub {
 	my $names;
 	if (defined $ref->{'user'}->{'name'}) {
 		$names = 
-			"${EM}".
+			"${EM}${RED}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
 			' ('.
-			"${EM}".
+			"${EM}${RED}".
 			&descape($ref->{'user'}->{'username'}).
 			"$OFF".
 			') [' . &descape($ref->{'user'}->{'type'}) . '] '
