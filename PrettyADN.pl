@@ -16,11 +16,11 @@ $handle = sub {
 	my $names;
 	if (defined $ref->{'user'}->{'name'}) {
 		$names = 
-			"${EM}".
+			"${EM}${CYAN}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
 			' ('.
-			"${EM}".
+			"${EM}${CYAN}".
 			&descape($ref->{'user'}->{'username'}).
 			"$OFF".
 			') [' . &descape($ref->{'user'}->{'type'}) . '] '
