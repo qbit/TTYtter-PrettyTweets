@@ -5,11 +5,13 @@ A texapp extension which reformats the posts to look pretty.
 
 ![Screen shot](screenshot.png)
 
+
 PrettyADN.pl
 ---------------
 
 The extension.  Simply load it by adding -exts="/path/to/PrettyADN.pl" to your
-ttytter invocation.
+ttytter invocation. You can also add the `exts=` to your texapprc file to 
+automatically load it.
 
 You can change the colours by setting `extpref_prettyadn_pm_usercolour=BLAH` and
 `extpref_prettyadn_stream_usercolour=BLAH` in your .texapprc, or specifying
@@ -38,17 +40,22 @@ not currently supported. Sorry! (Maybe in a future release.)
 *Please note*: your terminal needs to support unicode and be at least 145
 characters wide
 
+
 Known Bugs
 ----------
 
-This extension inexplicably breaks growl support (possibly other notifications
-as well) - this may not still apply ( 2013-05-12 )
+None!
+
+The original ttytter extension states that it broke Growl/notification support,
+but this has not been tested with the texapp extension.
+
 
 NOTE
 ----
 
-I have not tested this code with anything but my own setup.  If you *do* run it
-and encounter problems, I'd love to hear about it.
+Testing? We don't need no stinkin' testing!
 
-^ Applies to me too :D
+It works for me. It should work for you. If something is broken, that's on you,
+but let me know and I'll see if there's something I can figure out.
+
 
