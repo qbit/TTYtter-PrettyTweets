@@ -19,16 +19,20 @@ your colour choice. By default, these are `extpref_prettyadn_pm_usercolour=RED`
 and `extpref_prettyadn_stream_usercolour=CYAN`.
 
 Valid colour choices are:
- * BLUE
- * RED
- * GREEN
- * YELLOW
- * MAGENTA
- * CYAN
+ * `BLUE`
+ * `RED`
+ * `GREEN`
+ * `YELLOW`
+ * `MAGENTA`
+ * `CYAN`
 You can also specify `EM` (bold), `UNDER` (underline), or `OFF` (unformatted).
+
 *Only one colour/tag can be specified.*
+
 Colours and tags are *CASE SENSITIVE.*
 
+Combining colours and formatting, for crazy background colours, blinking, etc is
+not currently supported. Sorry! (Maybe in a future release.)
 
 *Please note*: your terminal needs to support unicode and be at least 145
 characters wide
