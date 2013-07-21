@@ -11,13 +11,23 @@ PrettyADN.pl
 The extension.  Simply load it by adding -exts="/path/to/PrettyADN.pl" to your
 ttytter invocation.
 
-You can change the colours by setting `extpref_prettyadn_pm_usercolour` and
-`extpref_prettyadn_stream_usercolour` in your .texapprc, or specifying
+You can change the colours by setting `extpref_prettyadn_pm_usercolour=BLAH` and
+`extpref_prettyadn_stream_usercolour=BLAH` in your .texapprc, or specifying
 `-extpref_prettyadn_pm_usercolour=BLAH` and/or 
-`-extpref_prettyadn_stream_usercolour=BLAH` in your invocation. By default, 
-these are `extpref_prettyadn_pm_usercolour=RED` and 
-`extpref_prettyadn_stream_usercolour=CYAN`.
+`-extpref_prettyadn_stream_usercolour=BLAH` in your invocation, where BLAH is
+your colour choice. By default, these are `extpref_prettyadn_pm_usercolour=RED` 
+and `extpref_prettyadn_stream_usercolour=CYAN`.
 
+Valid colour choices are:
+ * BLUE
+ * RED
+ * GREEN
+ * YELLOW
+ * MAGENTA
+ * CYAN
+You can also specify `EM` (bold), or `UNDER` (underline).
+*Only one colour/tag can be specified.*
+Colours and tags are *CASE SENSITIVE.*
 
 
 *Please note*: your terminal needs to support unicode and be at least 145
