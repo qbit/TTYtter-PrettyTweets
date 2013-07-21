@@ -9,7 +9,7 @@ PrettyADN.pl
 ---------------
 
 The extension.  Simply load it by adding -exts="/path/to/PrettyADN.pl" to your
-ttytter invocation.
+texapp invocation.
 
 *Please note*: your terminal needs to support unicode and be at least 145
 characters wide
