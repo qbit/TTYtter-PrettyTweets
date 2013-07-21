@@ -1,7 +1,7 @@
 # vim keybinding for running this extension during testing
 # yank the lines and execute them with :@" separately
-# :nmap <F5> :w<CR>:!ttytter -timestamp="\%H:\%M" -exts=%:p<CR>
-# :imap <F5> <Esc>:w<CR>:!ttytter -timestamp="\%H:\%M" -exts=%:p<CR>
+# :nmap <F5> :w<CR>:!texapp -exts=%:p<CR>
+# :imap <F5> <Esc>:w<CR>:!texapp -exts=%:p<CR>
 use Data::Dumper;
 
 $handle = sub {

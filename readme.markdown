@@ -10,7 +10,7 @@ PrettyADN.pl
 ---------------
 
 The extension.  Simply load it by adding -exts="/path/to/PrettyADN.pl" to your
-ttytter invocation. You can also add the `exts=` to your texapprc file to 
+texapp invocation. You can also add the `exts=` to your texapprc file to 
 automatically load it.
 
 You can change the colours by setting `extpref_prettyadn_pm_usercolour=BLAH` and
