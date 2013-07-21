@@ -28,7 +28,3 @@ and encounter problems, I'd love to hear about it.
 
 ^ Applies to me too :D
 
-TODO
-----
-
-Fix color support.
