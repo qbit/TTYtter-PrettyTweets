@@ -49,7 +49,7 @@ $handle = sub {
 $pmhandle = sub {
 	my $ref = shift;
 
-	$colour = ${'CCdm'};
+	$colour = ${'CCpm'};
 	$colour = $OFF.$colour;
 
 	my ($time, $ts) = &$wraptime($ref->{'created_at'}) if &getvariable('timestamp');
