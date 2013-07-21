@@ -10,17 +10,20 @@ $handle = sub {
 	$colour = ${'CC'.scalar(&$posttype($ref,&descape($ref->{'user'}->{'username'}),$ref->{'text'}))};
 	$colour = $OFF.$colour;
 
+	my $usercolor = $CYAN;
+	$usercolor = ${$extpref_prettyadn_stream_usercolour} if($extpref_prettyadn_stream_usercolour);
+
 	my ($time, $ts) = &$wraptime($ref->{'created_at'}) if &getvariable('timestamp');
 	my $menuselect = '<'.$ref->{'_texapp_menu_select'}.'> ';
 	my $timestamp = defined($ts)?'['.$ts.'] ':'';
 	my $names;
 	if (defined $ref->{'user'}->{'name'}) {
 		$names = 
-			"${EM}${CYAN}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
 			' ('.
-			"${EM}${CYAN}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'username'}).
 			"$OFF".
 			') [' . &descape($ref->{'user'}->{'type'}) . '] '
@@ -52,17 +55,20 @@ $pmhandle = sub {
 	$colour = ${'CCpm'};
 	$colour = $OFF.$colour;
 
+	my $usercolor = $RED;
+	$usercolor = ${$extpref_prettyadn_pm_usercolour} if($extpref_prettyadn_pm_usercolour);
+
 	my ($time, $ts) = &$wraptime($ref->{'created_at'}) if &getvariable('timestamp');
 	my $menuselect = '<DM d'.$ref->{'_texapp_menu_select'}.'> ';
 	my $timestamp = defined($ts)?'['.$ts.'] ':'';
 	my $names;
 	if (defined $ref->{'user'}->{'name'}) {
 		$names = 
-			"${EM}${RED}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
 			' ('.
-			"${EM}${RED}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'username'}).
 			"$OFF".
 			') [' . &descape($ref->{'user'}->{'type'}) . '] '
