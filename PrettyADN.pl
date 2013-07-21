@@ -7,8 +7,11 @@ use Data::Dumper;
 $handle = sub {
 	my $ref = shift;
 
-	$color = ${'CC'.scalar(&$posttype($ref,&descape($ref->{'user'}->{'username'}),$ref->{'text'}))};
-	$color = $OFF.$color;
+	$colour = ${'CC'.scalar(&$posttype($ref,&descape($ref->{'user'}->{'username'}),$ref->{'text'}))};
+	$colour = $OFF.$colour;
+
+	my $usercolor = $CYAN;
+	$usercolor = ${$extpref_prettyadn_stream_usercolour} if($extpref_prettyadn_stream_usercolour);
 
 	my ($time, $ts) = &$wraptime($ref->{'created_at'}) if &getvariable('timestamp');
 	my $menuselect = '<'.$ref->{'_texapp_menu_select'}.'> ';
@@ -16,11 +19,11 @@ $handle = sub {
 	my $names;
 	if (defined $ref->{'user'}->{'name'}) {
 		$names = 
-			"${EM}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
 			' ('.
-			"${EM}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'username'}).
 			"$OFF".
 			') [' . &descape($ref->{'user'}->{'type'}) . '] '
@@ -28,14 +31,14 @@ $handle = sub {
 	} else {
 		$names = "${EM}".&descape($ref->{'user'}->{'username'})."$OFF ";
 	}
-	my $text = "${color}".&descape($ref->{'text'})."$OFF";
+	my $text = "${colour}".&descape($ref->{'text'})."$OFF";
 	my $bar = &descape("┃ ");
 	$text =~ s/\\n/\n$bar/g;
 
 	&sto(join('', 
 		&descape("┏━━ "),
 		$names,
-		"${color}".$menuselect."$OFF",
+		"${colour}".$menuselect."$OFF",
 		$timestamp,
 		"\n".&descape("┃ "),
 		#(' ' x length $menuselect),
@@ -49,8 +52,11 @@ $handle = sub {
 $pmhandle = sub {
 	my $ref = shift;
 
-	$color = ${'CCdm'};
-	$color = $OFF.$color;
+	$colour = ${'CCpm'};
+	$colour = $OFF.$colour;
+
+	my $usercolor = $RED;
+	$usercolor = ${$extpref_prettyadn_pm_usercolour} if($extpref_prettyadn_pm_usercolour);
 
 	my ($time, $ts) = &$wraptime($ref->{'created_at'}) if &getvariable('timestamp');
 	my $menuselect = '<DM d'.$ref->{'_texapp_menu_select'}.'> ';
@@ -58,11 +64,11 @@ $pmhandle = sub {
 	my $names;
 	if (defined $ref->{'user'}->{'name'}) {
 		$names = 
-			"${EM}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'name'}).
 			"$OFF".
 			' ('.
-			"${EM}".
+			"${EM}${usercolor}".
 			&descape($ref->{'user'}->{'username'}).
 			"$OFF".
 			') [' . &descape($ref->{'user'}->{'type'}) . '] '
@@ -70,14 +76,14 @@ $pmhandle = sub {
 	} else {
 		$names = "${EM}".&descape($ref->{'user'}->{'username'})."$OFF ";
 	}
-	my $text = "${color}".&descape($ref->{'text'})."$OFF";
+	my $text = "${colour}".&descape($ref->{'text'})."$OFF";
 	my $bar = &descape("┃ ");
 	$text =~ s/\\n/\n$bar/g;
 
 	&sto(join('',
 		&descape("┏━━ "),
 		$names,
-		"${color}".$menuselect."$OFF",
+		"${colour}".$menuselect."$OFF",
 		$timestamp,
 		"\n".&descape("┃ "),
 		#(' ' x length $menuselect),
