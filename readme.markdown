@@ -25,7 +25,7 @@ Valid colour choices are:
  * YELLOW
  * MAGENTA
  * CYAN
-You can also specify `EM` (bold), or `UNDER` (underline).
+You can also specify `EM` (bold), `UNDER` (underline), or `OFF` (unformatted).
 *Only one colour/tag can be specified.*
 Colours and tags are *CASE SENSITIVE.*
 
