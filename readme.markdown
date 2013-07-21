@@ -10,7 +10,8 @@ PrettyADN.pl
 ---------------
 
 The extension.  Simply load it by adding -exts="/path/to/PrettyADN.pl" to your
-ttytter invocation.
+ttytter invocation. You can also add the `exts=` to your texapprc file to 
+automatically load it.
 
 *Please note*: your terminal needs to support unicode and be at least 145
 characters wide
